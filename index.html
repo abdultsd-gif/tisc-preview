@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>T.I.S.C. — About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html { margin: 0; padding: 0; overflow-x: hidden; background: #0a1c2d; }
+  body { margin: 0; padding: 0; overflow-x: hidden; background: #ffffff; }
+  * { box-sizing: border-box; }
+  img { display: block; }
+
+  .tisc-hero {
+    --navy-2: #0a1c2d;
+    --panel: #102a40;
+    --electric: #2ca9ff;
+    --action: #0787df;
+    --muted: #bdd0dd;
+    background: var(--navy-2);
+    color: #fff;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+  }
+  .tisc-hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: clamp(620px, 71.7vw, 1035px);
+  }
+  .tisc-hero__copy {
+    padding: clamp(64px, 6.4vw, 92px) 56px clamp(52px, 5vw, 76px) 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(18px, 1.7vw, 26px);
+    max-width: none;
+  }
+  .tisc-eyebrow {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--electric);
+  }
+  .tisc-hero__title {
+    margin: 0;
+    font-size: clamp(34px, 3.5vw, 50px);
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .tisc-hero__body { margin: 0; font-size: clamp(17px, 1.25vw, 19px); line-height: 1.65; color: var(--muted); max-width: 520px; }
+  .tisc-btn {
+    display: inline-flex; align-items: center; justify-content: center; align-self: flex-start;
+    background: var(--action); color: #fff; text-decoration: none;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+    padding: 14px 22px; border-radius: 5px;
+  }
+  .tisc-hero__stats {
+    margin: clamp(44px, 6.6vw, 104px) 0 0; font-size: 10px; letter-spacing: 0.13em; white-space: nowrap;
+    text-transform: uppercase; color: #7f9ab0;
+  }
+  .tisc-hero__media { background: var(--panel) center/cover no-repeat; min-height: 420px; }
+
+  .tisc-light { background: #ffffff; color: #10283b; }
+  .tisc-dark { background: #0a1c2d; color: #ffffff; }
+  .tisc-section { font-family: Montserrat, Helvetica, Arial, sans-serif; padding: clamp(64px, 8vw, 128px) 0; overflow: hidden; }
+  .tisc-wrap { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+  .tisc-split { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr); gap: 56px; align-items: center; }
+
+  .tisc-section .tisc-eyebrow { margin: 0 0 14px; color: #0787df; }
+  .tisc-dark .tisc-eyebrow { color: #2ca9ff; }
+  .tisc-h2 { margin: 0 0 18px; font-size: clamp(30px, 3.4vw, 48px); line-height: 1.16; font-weight: 700; letter-spacing: -0.01em; }
+  .tisc-dark .tisc-h2 { color: #ffffff; }
+  .tisc-body { margin: 0 0 24px; font-size: clamp(16px, 1.2vw, 17.5px); line-height: 1.75; color: #647989; max-width: 540px; }
+  .tisc-dark .tisc-body { color: #bdd0dd; }
+  .tisc-media { border-radius: 6px; overflow: hidden; background: #102a40 center/cover no-repeat; height: clamp(420px, 39vw, 560px); }
+  .tisc-media img { width: 100%; height: 100%; object-fit: cover; }
+
+  .tisc-cards { display: grid; gap: 14px; margin-top: 8px; }
+  .tisc-card { border: 1px solid #dae4ec; background: #ffffff; border-radius: 8px; padding: clamp(20px, 1.6vw, 26px) clamp(22px, 1.7vw, 28px); }
+  .tisc-card__label { display: block; margin-bottom: 8px; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #0787df; }
+  .tisc-card p { margin: 0; font-size: clamp(14px, 1.05vw, 15.5px); line-height: 1.7; color: #33475b; }
+
+  .tisc-steps { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: clamp(18px, 2vw, 26px); }
+  .tisc-step { display: grid; grid-template-columns: 34px 1fr; gap: 14px; align-items: start; }
+  .tisc-step__num {
+    width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #0787df; color: #fff; font-size: 12px; font-weight: 700;
+  }
+  .tisc-step h3 { margin: 0 0 5px; font-size: clamp(15px, 1.1vw, 16.5px); font-weight: 700; color: #ffffff; }
+  .tisc-step p { margin: 0; font-size: clamp(13.5px, 1vw, 15px); line-height: 1.65; color: #bdd0dd; }
+
+  .tisc-roadmap { display: grid; gap: 10px; }
+  .tisc-roadmap__row { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: center; background: #ffffff; border: 1px solid #dfe8f1; border-radius: 6px; padding: clamp(14px, 1.2vw, 18px) clamp(16px, 1.4vw, 22px); }
+  .tisc-roadmap__row--active { background: #0a2a3f; border-color: #0a2a3f; }
+  .tisc-roadmap__year { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #0787df; }
+  .tisc-roadmap__row--active .tisc-roadmap__year { color: #2ca9ff; }
+  .tisc-roadmap__title { font-size: clamp(13.5px, 1.02vw, 15px); font-weight: 500; color: #647989; line-height: 1.45; }
+  .tisc-roadmap__row--active .tisc-roadmap__title { color: #ffffff; }
+  .tisc-evo-copy { display: grid; gap: clamp(18px, 1.7vw, 26px); }
+  .tisc-evo-copy .tisc-media { height: 300px; }
+
+  @media (max-width: 1023px) {
+    .tisc-hero__inner { grid-template-columns: 1fr; min-height: 0; }
+    .tisc-hero__copy { padding: 56px 28px 48px; max-width: none; order: 2; }
+    .tisc-hero__media { min-height: 300px; order: 1; }
+    .tisc-hero__title { font-size: clamp(30px, 7vw, 40px); }
+    .tisc-hero__stats { font-size: 9px; white-space: normal; line-height: 1.9; }
+    .tisc-section { padding: 56px 0; }
+    .tisc-split { grid-template-columns: 1fr; gap: 32px; }
+    .tisc-wrap { padding: 0 22px; }
+    .tisc-media { height: 260px; }
+    .tisc-evo-copy .tisc-media { height: 240px; }
+    .tisc-roadmap__row { grid-template-columns: 1fr; gap: 6px; }
+    .tisc-h2 { font-size: clamp(26px, 6.4vw, 32px); }
+  }
+</style>
+</head>
+<body>
+
+<section class="tisc-hero">
+  <div class="tisc-hero__inner">
+    <div class="tisc-hero__copy">
+      <p class="tisc-eyebrow">ABOUT T.I.S.C.</p>
+      <h1 class="tisc-hero__title">Built From Both Sides of the Technology Decision</h1>
+      <p class="tisc-hero__body">Technology decisions should start with the customer&rsquo;s requirements, not a provider&rsquo;s product catalog.</p>
+      <a class="tisc-btn" href="https://danfields01.wixstudio.com/my-site-1/contact" target="_top">TALK WITH AN ADVISOR</a>
+      <p class="tisc-hero__stats">ESTABLISHED 2019 &nbsp;&bull;&nbsp; SOUTHERN CALIFORNIA ROOTS &nbsp;&bull;&nbsp; NATIONWIDE CAPABILITIES</p>
+    </div>
+    <div class="tisc-hero__media" style="background-image:url('https://static.wixstatic.com/media/f4ccf5_6afd3c1eefee411fa4a159fd6eaa9e24~mv2.png')"></div>
+  </div>
+</section>
+
+<section class="tisc-section tisc-light">
+  <div class="tisc-wrap tisc-split">
+    <div>
+      <p class="tisc-eyebrow">Our Origin</p>
+      <h2 class="tisc-h2">Two Perspectives. One Shared Purpose.</h2>
+      <p class="tisc-body">T.I.S.C. was founded by leaders who had spent decades on opposite sides of the same technology decisions.</p>
+      <div class="tisc-cards">
+        <div class="tisc-card">
+          <span class="tisc-card__label">Commercial Technology Leadership</span>
+          <p>32 years of sales experience, 27 years of leadership experience and 29 years in technology and telecommunications, including VP, CRO and COO roles.</p>
+        </div>
+        <div class="tisc-card">
+          <span class="tisc-card__label">Hands-On IT Leadership</span>
+          <p>More than 25 years managing IT organizations, including IT Director, CTO and CSO leadership roles.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tisc-media">
+      <img src="https://static.wixstatic.com/media/f4ccf5_f4722b5b58f44abab852389537a180d3~mv2.png" alt="T.I.S.C. founders working together" />
+    </div>
+  </div>
+</section>
+
+<section class="tisc-section tisc-dark">
+  <div class="tisc-wrap tisc-split">
+    <div>
+      <p class="tisc-eyebrow">Why T.I.S.C. Was Created</p>
+      <h2 class="tisc-h2">Closing the Gap Between Need and Delivery</h2>
+      <p class="tisc-body">Traditional providers often begin with their own portfolio. T.I.S.C. begins with the customer.</p>
+      <ol class="tisc-steps">
+        <li class="tisc-step"><span class="tisc-step__num">01</span><div><h3>Solutions shaped around business requirements</h3></div></li>
+        <li class="tisc-step"><span class="tisc-step__num">02</span><div><h3>Independent access to a broad provider ecosystem</h3></div></li>
+        <li class="tisc-step"><span class="tisc-step__num">03</span><div><h3>One accountable advisor across the decision lifecycle</h3></div></li>
+        <li class="tisc-step"><span class="tisc-step__num">04</span><div><h3>Enterprise expertise without enterprise bureaucracy</h3></div></li>
+      </ol>
+    </div>
+    <div class="tisc-media">
+      <img src="https://static.wixstatic.com/media/f4ccf5_82843200230049cc947acb0766c2d167~mv2.png" alt="Advisors reviewing a technology plan" />
+    </div>
+  </div>
+</section>
+
+<section class="tisc-section tisc-light">
+  <div class="tisc-wrap tisc-split">
+    <div class="tisc-evo-copy">
+      <div>
+        <p class="tisc-eyebrow">How the Company Evolved</p>
+        <h2 class="tisc-h2">From SLED Roots to Broader Market Impact</h2>
+        <p class="tisc-body">The same sourcing, modernization and execution gaps appear across organizations of every size.</p>
+      </div>
+      <div class="tisc-media">
+        <img src="https://static.wixstatic.com/media/f4ccf5_ef8523f19e994f90a5962a7838ca861f~mv2.png" alt="T.I.S.C. team planning session" />
+      </div>
+    </div>
+    <div class="tisc-roadmap">
+      <div class="tisc-roadmap__row"><div class="tisc-roadmap__year">2019</div><div class="tisc-roadmap__title">T.I.S.C. established</div></div>
+      <div class="tisc-roadmap__row"><div class="tisc-roadmap__year">Initial focus</div><div class="tisc-roadmap__title">State, Local &amp; Education</div></div>
+      <div class="tisc-roadmap__row"><div class="tisc-roadmap__year">Expansion</div><div class="tisc-roadmap__title">SMB &amp; midmarket</div></div>
+      <div class="tisc-roadmap__row tisc-roadmap__row--active"><div class="tisc-roadmap__year">Today</div><div class="tisc-roadmap__title">Enterprise and nationwide capability</div></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
